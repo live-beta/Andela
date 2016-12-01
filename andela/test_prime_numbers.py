@@ -1,7 +1,6 @@
 import unittest
 
-from prime_number import is_prime
-
+from prime_number import prime_gen
 class TestCalculator(unittest.TestCase):
     def test_negative_numbers(self):
         self.assertEqual(prime_gen(-3),'Negatives not allowed')
