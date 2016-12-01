@@ -2,17 +2,14 @@
 import math
 
 def prime_gen(number):
-    if number < 0:
-        print "Negative number, not allowed"
 
-    while True:
-        primetest = True
-        for x in range(2, int(math.sqrt(number) + 1)):
-            if number % x == 0:
-                primetest = False
+    for p in range(2,int(number)+1):
+        for i in range(2,p):
+            if p%i == 0:
                 break
-        if primetest and number >1:
-            print number
-        number -= 1
+        else:
+            print (p)
 
-print prime_gen(6)
+    print ("Done")
+
+print prime_gen(200)
