@@ -1,17 +1,15 @@
 
-def is_prime(number):
-    if number <0:
-        print "Negative Numbers Not allowed"
+import math
 
-    l=[]
-    while number > 0:
-        if number%2 == 1 and number%3 ==1 and number%5 == 1 and number%number == 0 :
-            l.append(number)
-            number = number-1
-        else:
-            number= number - 1
-        number = number - 1
+def prime_gen(number):
+    while True:
+        primetest = True
+        for x in range(2, int(math.sqrt(number) + 1)):
+            if number % x == 0:
+                primetest = False
+                break
+        if primetest and number >1:
+            print number
+        number -= 1
 
-    return l
-
-print is_prime(10)
+print prime_gen(20)
