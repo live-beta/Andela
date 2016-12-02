@@ -13,7 +13,7 @@ while True:
    if command[0]=='exit': #Exit prompt
      break 
     #beginning Request Phase
-    connection.request(command[0], command[1])
+    connection_1.request(command[0], command[1])
 
     #get from server
     responder=conn.getresponse()
@@ -22,4 +22,4 @@ while True:
     print(response.status,response.reason)
     data_received=response.read()
     print(data_received)
-connection.close()
+connection_1.close()
