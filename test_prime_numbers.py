@@ -15,3 +15,5 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(prime_gen(1.1),'Decimal inputs are not allowed')
     def test_float_inputs(self):
         self.assertEqual(prime_gen(0.112),'Floating point inputs not allowed')
+    def test_result(self):
+	self.assertEqual(prime_gen(2), 9 ,'Number is not prime')
